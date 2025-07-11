@@ -7,8 +7,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: 'src/index.ts',
-			name: 'KcUi',
-			fileName: format => `kc-ui.${format}.js`,
+			name: 'ChaseUi',
+			fileName: format => `chase-ui.${format}.js`,
 			formats: ['es', 'umd'],
 		},
 		rollupOptions: {

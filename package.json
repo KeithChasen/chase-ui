@@ -1,8 +1,8 @@
 {
-	"name": "kc-ui",
+	"name": "chase-ui",
 	"version": "0.0.1",
-	"main": "dist/kc-ui.umd.js",
-	"module": "dist/kc-ui.es.js",
+	"main": "dist/chase-ui.umd.js",
+	"module": "dist/chase-ui.es.js",
 	"types": "dist/types/index.d.ts",
 	"scripts": {
 		"build": "vite build",
