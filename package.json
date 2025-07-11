@@ -1,6 +1,6 @@
 {
 	"name": "kc-ui",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"main": "dist/kc-ui.umd.js",
 	"module": "dist/kc-ui.es.js",
 	"types": "dist/types/index.d.ts",
