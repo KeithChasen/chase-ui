@@ -10,7 +10,11 @@
 		"strict": true,
 		"moduleResolution": "node",
 		"esModuleInterop": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"chase-ui": ["./src"]
+		}
 	},
 	"include": ["src"]
 }
