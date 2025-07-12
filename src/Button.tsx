@@ -4,17 +4,17 @@ import { getSpacings } from './utils';
 
 export interface ButtonProps extends CommonCssProps {
 	children: React.ReactNode;
-	bg?: string;
+	bgColor?: string;
 	tColor?: string;
 }
 
 export const Button: React.FC<ButtonProps> = props => {
-	const { children, bg, tColor } = props;
+	const { children, bgColor, tColor } = props;
 	const { margin, padding } = getSpacings(props);
 	return (
 		<button
 			style={{
-				backgroundColor: bg,
+				backgroundColor: bgColor,
 				color: tColor,
 				border: 'none',
 				...padding,
