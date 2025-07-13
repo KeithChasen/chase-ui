@@ -23,7 +23,7 @@ export const getSpacing = (
 	{ all, left, right, top, bottom }: SpacingProps,
 	type: SpacingTypes
 ): SpacingReturnType => {
-	if (all) return { type: all };
+	if (all) return { [type]: all };
 
 	return {
 		...(left && { [`${type}Left`]: left }),

@@ -6,26 +6,23 @@ export const App = () => {
 
 	console.log({ colorContext });
 	return (
-		<div>
-			<h1>UI Demo</h1>
-			<Button
-				bgColor={colorContext.palette.color}
-				pb='12px'
-				pr='10px'
-				ml='20px'
-				mt='40px'
+		<div
+			style={{
+				background: 'grey',
+				height: '100vh',
+			}}
+		>
+			<h1
+				style={{
+					background: 'black',
+					color: 'white',
+				}}
 			>
-				1st button
-			</Button>
+				UI Demo
+			</h1>
 
-			<Button
-				bgColor={colorContext.palette.hsl}
-				pb='12px'
-				pr='10px'
-				ml='20px'
-				mt='40px'
-			>
-				2nd button
+			<Button bgColor={colorContext.palette.hsl} p='12px' m='10px'>
+				Test
 			</Button>
 		</div>
 	);
