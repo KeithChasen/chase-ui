@@ -15,7 +15,7 @@ export const Button: React.FC<ButtonProps> = props => {
 
 	const colorContext = useColorPalette();
 
-	console.log({ colorContext });
+	// console.log({ colorContext });
 
 	return (
 		<button
