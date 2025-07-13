@@ -1,4 +1,7 @@
-export const hexToHsl = (hex: string) => {
+import { ColorSchema } from '../context/ColorContext';
+import type { HSLObject } from '../context/ColorContext';
+
+export const hexToHsl = (hex: string): HSLObject => {
 	if (hex.length < 7) {
 		throw new Error('HEX should be in format #xxxxxx');
 	}
@@ -24,6 +27,15 @@ export const hexToHsl = (hex: string) => {
 	s = +(s * 100).toFixed(1);
 	l = +(l * 100).toFixed(1);
 
+	return {
+		h,
+		s,
+		l,
+	};
+};
+
+export const getHSLString = (hsl: HSLObject): string => {
+	const { h, s, l } = hsl;
 	return `hsl(${h},${s}%,${l}%)`;
 };
 
@@ -32,4 +44,14 @@ const getH = (delta: number, cmax: number, r: number, g: number, b: number) => {
 	if (cmax === r) return ((g - b) / delta) % 6;
 	else if (cmax === g) return (b - r) / delta + 2;
 	return (r - g) / delta + 4;
+};
+
+export const generateSchema = (hsl: HSLObject, schema: ColorSchema) => {
+	if (schema === ColorSchema.COMPLEMENTARY) {
+		const newH = (hsl.h + 180) % 360;
+		return {
+			main: hsl,
+			c: { h: newH, s: hsl.s, l: hsl.l },
+		};
+	}
 };

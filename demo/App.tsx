@@ -8,20 +8,25 @@ export const App = () => {
 	return (
 		<div
 			style={{
-				background: 'grey',
+				background: colorContext.palette.primary,
 				height: '100vh',
 			}}
 		>
 			<h1
 				style={{
-					background: 'black',
+					background: colorContext.palette.secondary,
 					color: 'white',
 				}}
 			>
 				UI Demo
 			</h1>
 
-			<Button bgColor={colorContext.palette.hsl} p='12px' m='10px'>
+			<Button
+				bgColor={colorContext.palette.secondary}
+				tColor={colorContext.palette.primary}
+				p='12px'
+				m='10px'
+			>
 				Test
 			</Button>
 		</div>

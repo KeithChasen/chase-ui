@@ -4,7 +4,7 @@ import { App } from './App';
 import { ColorProvider } from 'chase-ui';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<ColorProvider brandColors={['#f04f5f']}>
+	<ColorProvider brandColors={['#fccb1a']}>
 		<App />
 	</ColorProvider>
 );
